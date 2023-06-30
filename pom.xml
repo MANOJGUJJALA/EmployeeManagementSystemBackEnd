@@ -59,6 +59,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+			<finalName>employee</finalName>
 	</build>
 
 </project>

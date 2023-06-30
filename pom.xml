@@ -60,7 +60,7 @@
 			</plugin>
 		</plugins>
 
-			<finalName>employee</finalName>
+			<finalName>docker-spring-boot</finalName>
 
 	</build>
 

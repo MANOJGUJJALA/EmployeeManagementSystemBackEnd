@@ -24,16 +24,16 @@ public class EmployeeController {
 
     @GetMapping
 
-    public List<String > getStrings(){
-        List<String > a=new ArrayList<>();
-        a.add("MAnoj");
-        a.add("harsh");
-        return a;
-    }
-
-//    public List<Employee> getALlEmplpoyees(){
-//        return employeeService.getAllEmployes();
+//    public List<String > getStrings(){
+//        List<String > a=new ArrayList<>();
+//        a.add("MAnoj");
+//        a.add("harsh");
+//        return a;
 //    }
+
+    public List<Employee> getALlEmplpoyees(){
+        return employeeService.getAllEmployes();
+    }
 
 
     @PostMapping

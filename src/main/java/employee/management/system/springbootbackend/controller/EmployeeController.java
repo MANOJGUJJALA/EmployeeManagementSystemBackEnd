@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -22,9 +23,17 @@ public class EmployeeController {
 
 
     @GetMapping
-    public List<Employee> getALlEmplpoyees(){
-        return employeeService.getAllEmployes();
+
+    public List<String > getStrings(){
+        List<String > a=new ArrayList<>();
+        a.add("MAnoj");
+        a.add("harsh");
+        return a;
     }
+
+//    public List<Employee> getALlEmplpoyees(){
+//        return employeeService.getAllEmployes();
+//    }
 
 
     @PostMapping

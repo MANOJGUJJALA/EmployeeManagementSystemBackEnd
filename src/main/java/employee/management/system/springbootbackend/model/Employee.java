@@ -26,4 +26,6 @@ public class Employee {
     private String lastName;
     @Column(name = "email_d")
     private String emailId;
+    @Column(name = "phoneNo")
+    private Long  phoneNo;
 }

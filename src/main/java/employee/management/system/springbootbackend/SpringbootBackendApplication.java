@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SpringbootBackendApplication implements CommandLineRunner {
 
-	public String PORT=System.getenv("PORT");
+//	public String PORT=System.getenv("PORT");
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootBackendApplication.class, args);

@@ -21,13 +21,18 @@ public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
 
-    @GetMapping
+    @GetMapping("/user/{registerUserId}")
 
-    public List<Employee> getALlEmplpoyees(){
-        return employeeService.getAllEmployes();
+    public ResponseEntity< List<Employee> >getALlEmplpoyees(@PathVariable long registerUserId){
+
+
+        return ResponseEntity.ok(employeeService.getAllEmployes(registerUserId));
+
     }
     @PostMapping
     public Employee createEmployee(@RequestBody Employee employee){
+
+        System.out.println(employee.getRegister()+"--"+employee.getEmailId()+"--"+employee.getFirstName());
 
        return employeeService.addnewEmployee(employee);
     }

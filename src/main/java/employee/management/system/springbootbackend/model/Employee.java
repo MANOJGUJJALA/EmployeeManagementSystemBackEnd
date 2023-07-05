@@ -1,6 +1,8 @@
 package employee.management.system.springbootbackend.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,10 +16,14 @@ import lombok.Setter;
 
 @Entity
 @Table(name="employees")
+@JsonSerialize(include=JsonSerialize.Inclusion.NON_NULL)
+//Ignoring new fields on JSON objects
+
 public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private long id;
 
     @Column(name = "first_name")
@@ -27,5 +33,10 @@ public class Employee {
     @Column(name = "email_d")
     private String emailId;
     @Column(name = "phoneNo")
-    private Long  phoneNo;
+    private String   phoneNo;
+
+    @ManyToOne
+    @JoinColumn(name = "register_id")
+    @JsonIgnore
+    private Register register;
 }

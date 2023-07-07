@@ -9,7 +9,7 @@ RUN mvn clean package -DskipTests
 # Package stage
 #
 FROM openjdk:11-jdk-slim
-COPY --from=build /target/springboot-backend-0.0.1-SNAPSHOT-0.0.1-SNAPSHOT.jar demo.jar
+COPY --from=build /target/springboot-backend-0.0.1-SNAPSHOT.jar demo.jar
 # ENV PORT=8080
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","springboot-backend-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","demo.jar"]

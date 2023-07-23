@@ -35,7 +35,6 @@ public class Register {
     @OneToMany(mappedBy = "register", cascade = CascadeType.ALL, orphanRemoval = true)
 //    @JoinColumn(name = "i_d",referencedColumnName = "id")
     private List<Employee> employees;
-
     public List<Employee> getEmployees() {
         return employees;
     }
